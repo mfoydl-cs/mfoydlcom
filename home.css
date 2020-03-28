@@ -1,0 +1,16 @@
+/* Site Header */
+header{
+    padding: 1em;
+    background:white;
+    margin-bottom: 1em;
+    padding-bottom: 3.5em;
+    text-align: center;
+    clip-path: polygon(0 0,0 35%, 30% 85%, 70% 85%, 100% 35%, 100% 0);
+}
+
+
+/* Blog Posts */
+.post{
+    padding: 0 25 25 25;
+    background: lightgray;
+}
