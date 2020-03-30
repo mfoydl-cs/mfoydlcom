@@ -30,6 +30,9 @@ ul {
     align-items: center;
     justify-content: center;
 }
+.nav-item:hover{
+    background:#3a3a3a;
+}
 
 /* Navbar Dropdown */
 .dropdown-list{
@@ -49,6 +52,10 @@ ul {
 }
 .has-dropdown:hover .dropdown-list{
     display: flex;
+}
+.dropdown-item{
+    width: 200px;
+    font-size: large;
 }
 i{
     border: solid white;

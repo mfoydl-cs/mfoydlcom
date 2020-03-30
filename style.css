@@ -1,12 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+:root{
+    /* Color Palette */
+    --dark-gray: #3a3a3a;
+    --light-gray1: #f9f9f9;
+    --light-gray2: lightgray;
+
+    --main:#0077B6;
+    --alt:#00B4D8;
+    --dark:#03045E;
+    --light1:#90E0EF;
+    --light2:#CAF0F8;
+
+    --bg: var(--main);
+    --bg2: black;
+
+    /*Navbar Style */
+    --narbar-bg: black;
+    --navbar-text: white;
+    --navbar-h-bg: var(--dark-gray);
+    --dropdown-bg: var(--light-gray1);
+    --dropdown-text: black;
+
+    /* Header Style */
+    --header-grad1: var(--main);
+    --header-grad2: var(--dark);
+    --header-text:white;
+
+    /* Posts Style */
+    --post-bg: var(--light-gray2);
+    --post-text: black;
+    
+}
+
 body{
     margin: 0;
     padding: 0;
 }
 /* Content */
 .content{
-    display: flex;
+    padding-top:1em;
     padding-left: 10%;
     padding-right: 10%;
+    height: 100%;
+    /*background: linear-gradient(var(--bg),var(--bg2));*/
+    /*background: var(--light1);*/
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+/* NAVBAR */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    height: 70px;
+    width: 100%;
+    background: var(--narbar-bg);
+    color: var(--navbar-text);
+    
+}
+
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.nav-item{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    letter-spacing: 1;
+}
+.nav-item:hover{
+    background:var(--navbar-h-bg);
+}
+
+/* Navbar Dropdown */
+.dropdown-list{
+    color: var(--dropdown-text);
+    display: none;
+    position: absolute;
+    background: var(--dropdown-bg);
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 3rem;
+    padding: 0.5rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 70;
+    flex: 1;
+}
+.has-dropdown:hover .dropdown-list{
+    display: flex;
+}
+.dropdown-item{
+    width: 200px;
+    font-size: large;
+}
+i{
+    border: solid var(--navbar-text);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    margin: 0 0 5 20;
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/* Site Header */
+header{
+    height: 200px;
+    background: radial-gradient(var(--header-grad2),var(--header-grad1));
+    text-align: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+header h1{
+    font-size: 50px;
+    font-family: 'Press Start 2P', cursive;
+}
+.header-top{
+    flex: 2;
+    width: 100%;
+    padding-top: 1em;
+    color: var(--header-text);
+    background: linear-gradient(var(--header-grad1),var(--header-grad2));
+    clip-path: polygon(0 0,0 30%, 30% 99%, 70% 99%, 100% 30%, 100% 0);
+    
+}
+.header-bottom{
+    flex: .5;
+    width: 100%;
+    padding-bottom: 1em;
+    background: linear-gradient(var(--header-grad2),var(--header-grad1));
+    clip-path: polygon(0 100%,30% 0,70% 0,100% 100%);
+}
+
+/* Blog Posts */
+.post{
+    margin-bottom: 50px;
+    padding: 0 25 25 25;
+    background: var(--post-bg);
+    color: var(--post-text);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /*background: linear-gradient(var(--light-gray2),var(--light2),var(--light2));*/
+}
+.post-body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    /*flex: 0;*/
+    /*height: auto;
+    overflow: hidden;
+    transition: flex .5s ease;*/
+}
+
+.post:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+}
+.post-title{
+    flex: 1;
+    font-family: 'Playfair Display', serif;
 }
 
 
