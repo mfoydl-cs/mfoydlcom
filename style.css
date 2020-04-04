@@ -38,11 +38,18 @@ body{
     margin: 0;
     padding: 0;
 }
+footer{
+    width: 100%;
+    padding-top: 5em;
+    display: flex;
+    justify-content: flex-end;
+}
 /* Content */
 .content{
     padding-top:1em;
     padding-left: 10%;
     padding-right: 10%;
+    padding-bottom: 1em;
     height: 100%;
     /*background: linear-gradient(var(--bg),var(--bg2));*/
     /*background: var(--light1);*/
