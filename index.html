@@ -4,30 +4,25 @@
     <title>Mfoydl - CovidGoals</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $("#navplaceholder").load("navbar.html");
-        });
-    </script>
 </head>
 
 <body>
     <nav class="navbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class ="nav-item" href="#"><div>Home</div></a>
+                <a class ="nav-item selected" href="#"><div>Home</div></a>
             </li>
-            <li class="nav-item has-dropdown">
-                <div class="nav-item">
+            <li class="nav-item has-slide">
+                <div class="slide-header">
                     About
-                    <i class="arrow down"></i>
+                    <i class="slide-arrow"></i>
                 </div>
-                <ul class="dropdown-list">
-                    <li class="dropdown-item">
-                        <a href="aboutme.html" class="nav-item">Me</a>
+                <ul class="slide-list">
+                    <li class="slide-item">
+                        <a href="aboutme.html" class="slide-item">Me</a>
                     </li>
-                    <li class="dropdown-item">
-                        <a href="aboutsite.html" class="nav-item">This Page</a>
+                    <li class="slide-item">
+                        <a href="aboutsite.html" class="slide-item">This Page</a>
                     </li>
                 </ul>
             </li>
@@ -47,38 +42,35 @@
     <div class="content">
         <div class="post">
             <div class="post-title">
-                <h1>An Introduction</h1>
+                <h1>Navbar Improvements</h1>
             </div>
             <div class="post-body">
-                <p>With the standing shelter-in-place order in NY state, extra time seems to come a little extra in
-                abundance these days. To
-                turn this into a positive exprience, I've decided to create this website to make productive use of
-                my time. I've done some web programming
-                in college, but front-end development was never really ever considered important beyond
-                functionality, so this website will be
-                focused on creating something fun and exciting. Since this is just visual, front-end focused, I will
-                only be using plain HTML, CSS, and Javascript
-                to develop everything you see on this page. To keep things fresh I will use this as a blog for my
-                daily life and goals, as well as try to put out at least
-                weekly regular UI updates to slowly progress through things. Time to make my #CovidGoals a reality.</p>
+                <p>
+                    The second element I worked on is the navigation bar. 
+                    If you hover over the "About" section, it creates a sliding drawer effect to show the sub menus.
+                    I thought this was a little more fun than your typical dropdown menu that appears.
+                    This is done completely through CSS flex display and animations.
+                    The whole header is a flex element with evenly sized elements for each menu item.
+                    The about element is its own flex element with the about header, and two submenu items.
+                    The about selection is given flex of 1, and the submenu gets flex 0, and add on hidden overflow then the submenu gets hidden away.
+                    The final step is to add an animation on hover. 
+                    When the mouse hovers over the about tab, the flex value of the submenu is changed to 1 so that they take up equal space and pop out of hiding.
+                    The CSS Transition gives it the smooth gradual change.
+                </p>
             </div>
         </div>
         <div class="post">
             <div class="post-title">
-                <h1>An Introduction</h1>
+                <h1>The Header</h1>
             </div>
             <div class="post-body">
-                <p>With the standing shelter-in-place order in NY state, extra time seems to come a little extra in
-                    abundance these days. To
-                    turn this into a positive exprience, I've decided to create this website to make productive use of
-                    my time. I've done some web programming
-                    in college, but front-end development was never really ever considered important beyond
-                    functionality, so this website will be
-                    focused on creating something fun and exciting. Since this is just visual, front-end focused, I will
-                    only be using plain HTML, CSS, and Javascript
-                    to develop everything you see on this page. To keep things fresh I will use this as a blog for my
-                    daily life and goals, as well as try to put out at least
-                    weekly regular UI updates to slowly progress through things. Time to make my #CovidGoals a reality.</p>
+                <p>So the first piece I added to the site is the header design for the home page. 
+                    The angled line effect is created through two layed Div elements one topof each other.
+                    The top layer makes up the center section, which uses a CSS clip-path to angle out the corners of the header.
+                    The bottom layer beneath that is simply just a full size rectangle.
+                    Each layer then got a different gradient direction to create a color contrast at the edges where the elements meet.
+                    This gives it that stark contrast line between the two elements.
+                </p>
             </div>
         </div>
         <div class="post">

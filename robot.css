@@ -1,0 +1,63 @@
+:root{
+    --bg: white;
+    --body: gray;
+    --accent: blue;
+}
+body{
+    display: flex;
+    align-content: center;
+}
+#robo-con{
+    height: 1000px;
+    width: 1000px;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+/* head */
+#robo-head-con{
+    height: 17%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#robo-head{
+    height: 90%;
+    width: 100%;
+    background: var(--body);
+}
+#robo-neck{
+    height: 10%;
+    width: 50%;
+    background: var(--body);
+}
+
+/* body */
+#robo-body-con{
+    height: 40%;
+    width: 30%;
+}
+#robo-body{
+    height: 100%;
+    width: 100%;
+    background: var(--body);
+}
+
+#robo-legs-con{
+     height: 35%;
+    width: 25%;
+}
+#robo-legs{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.robo-leg{
+    width: 25%;
+    height: 90%;
+    background: var(--body);
+}

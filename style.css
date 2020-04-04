@@ -17,7 +17,7 @@
     --bg2: black;
 
     /*Navbar Style */
-    --narbar-bg: black;
+    --navbar-bg: black;
     --navbar-text: white;
     --navbar-h-bg: var(--dark-gray);
     --dropdown-bg: var(--light-gray1);
@@ -63,7 +63,7 @@ ul {
 .navbar{
     height: 70px;
     width: 100%;
-    background: var(--narbar-bg);
+    background: var(--navbar-bg);
     color: var(--navbar-text);
     
 }
@@ -87,6 +87,9 @@ ul {
 .nav-item:hover{
     background:var(--navbar-h-bg);
 }
+.selected{
+    color: var(--alt);
+}
 
 /* Navbar Dropdown */
 .dropdown-list{
@@ -104,6 +107,42 @@ ul {
     top: 70;
     flex: 1;
 }
+.slide-header{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    letter-spacing: 1;
+}
+.slide-list{
+    display: flex;
+    flex: 0;
+    color: var(--dropdown-text);
+    background: var(--dropdown-bg);
+    height: 100%;
+    overflow: hidden;
+    transition: flex 1s ease;
+}
+.slide-item{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    letter-spacing: 1;
+}
+.slide-item:hover{
+    background: lightgray;
+}
+.has-slide:hover .slide-list{
+    flex: 2;
+}
+
 .has-dropdown:hover .dropdown-list{
     display: flex;
 }
@@ -116,7 +155,15 @@ i{
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 2px;
-    margin: 0 0 5 20;
+    margin: 8 0 5 20;
+}
+.slide-arrow{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+.has-slide:hover .slide-arrow{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 .right {
     transform: rotate(-45deg);
@@ -148,13 +195,6 @@ header h1{
     background: linear-gradient(var(--header-grad1),var(--header-grad2));
     clip-path: polygon(0 0,0 30%, 30% 99%, 70% 99%, 100% 30%, 100% 0);
     
-}
-.header-bottom{
-    flex: .5;
-    width: 100%;
-    padding-bottom: 1em;
-    background: linear-gradient(var(--header-grad2),var(--header-grad1));
-    clip-path: polygon(0 100%,30% 0,70% 0,100% 100%);
 }
 
 /* Blog Posts */
