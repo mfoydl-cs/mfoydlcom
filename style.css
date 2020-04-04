@@ -33,7 +33,9 @@
     --post-text: black;
 
     --post-title-bg:var(--dark-gray);
-    --post-title-text:gray;
+    --post-title-text:white;
+    --post-title-code:var(--main);
+    --post-title-covid: red;
 
     
 }
@@ -275,20 +277,33 @@ header h1{
     padding: 0 5% 0 5%;
     height: 200px;
     width: 90%;
-    background: var(--title-bg);
+    background: var(--post-title-bg);
+    color: var(--post-title-text);
     font-family: 'Playfair Display', serif;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.post-title img svg{
-    color: blue;
-    fill: blue;
+.post-title h1{
+    opacity: .2;
 }
+.post:hover h1{
+    opacity: 1;
+}
+
 .post-title svg{
-    color:blue;
-    fill: blue;
+    fill: var(--post-title-text);
+    opacity: 0.2;
+    transition: .5s;
+}
+.post:hover .post-title svg{
+    opacity: 1;
+}
+.post:hover .code {
+    background: var(--post-title-code);
+}
+.post:hover .covid {
+    background: var(--post-title-covid);
 }
 
 
