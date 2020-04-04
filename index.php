@@ -2,36 +2,13 @@
 
 <head>
     <title>Mfoydl - CovidGoals</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="/static/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class ="nav-item selected" href="#"><div>Home</div></a>
-            </li>
-            <li class="nav-item has-slide">
-                <div class="slide-header">
-                    About
-                    <i class="slide-arrow"></i>
-                </div>
-                <ul class="slide-list">
-                    <li class="slide-item">
-                        <a href="aboutme.html" class="slide-item">Me</a>
-                    </li>
-                    <li class="slide-item">
-                        <a href="aboutsite.html" class="slide-item">This Page</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="nav-item">
-                <a href="funzone.html" class="nav-item">Fun Zone</a>
-            </li>
-        </ul>
-    </nav>
+    <?php include("navbar.html"); ?>
     
     <header>
         <div class="header-top">
@@ -40,54 +17,15 @@
 
     </header>
     <div class="content">
-        <div class="row">
-            <div class="post">
-                <div class="post-title code">
-                    <h1>Navbar</h1>
-                    <?php echo file_get_contents("./images/icons/code.svg"); ?>
-                </div>
-                <div class="post-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.</p>
-                    <a href="#">Read More..</a> </br>
-                    <div class="icon-tribute">
-                        Icons made by <a class="tribute" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> 
-                        from <a class="tribute"href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="post-title code">
-                    <h1>Header</h1>
-                    <?php echo file_get_contents("./images/icons/code.svg"); ?>
-                </div>
-                <div class="post-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.</p>
-                    <a href="">Read More..</a>
-                    <div class="icon-tribute">
-                        Icons made by <a class="tribute" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> 
-                        from <a class="tribute"href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-                    </div>
-                </div>
-            </div>
-            <div class="post">
-                <div class="post-title covid">
-                    <h1>Intro</h1>
-                    <!--<img src="./images/icons/coronavirus.svg" alt="">-->
-                    <?php echo file_get_contents("./images/icons/coronavirus.svg"); ?>
-                </div>
-                <div class="post-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.</p>
-                    <a href="">Read More..</a>
-                    <div class="icon-tribute">
-                        Icons made by <a class="tribute" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
-                        from <a class="tribute" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-                    </div>
-                </div>
-            </div>
+        <div class="post-con">
+            <?php include("./posts/post3/post3card.html"); ?>
         </div>
+        <div class="post-con">
+            <?php include("./posts/post2/post2card.html"); ?>
+        </div>
+        <div class="post-con">
+            <?php include("./posts/post1/post1card.html"); ?>
+        </div> 
     </div>
     <footer>
         <!-- Badge Code - Do Not Change The Code -->
@@ -95,7 +33,6 @@
             data-name="b747809f26b97cc44e9472a042bd65d2|5|ip|1|#030462|#ffffff|large|s-hit">Hit Counter</a>
         <script>document.write("<script type='text/javascript' src='https://visitorshitcounter.com/js/hitCounter.js?v=" + Date.now() + "'><\/script>");</script>
         <!-- Badge Code End Here -->
-
     </footer>
 </body>
 
